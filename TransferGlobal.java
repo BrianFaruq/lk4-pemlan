@@ -1,4 +1,4 @@
 public interface TransferGlobal extends LayananInternasional, TransaksiDigital {
-    void kirimKeLuarNegeri();
-
+    //void kirimKeLuarNegeri();
+    public void kirimLintasNegara();
 }
