@@ -37,18 +37,16 @@ public class RekeningValas extends Rekening implements TransferGlobal {
     // 4. Dari interface TransferGlobal
     @Override
     public void kirimLintasNegara() {
-        // Mengintegrasikan kelas ProtokolKeamanan yang bersifat final ke dalam logika transaksi
         System.out.println("\n--- Memulai Transfer Lintas Negara ---");
         prosesTransaksi();
         otentikasiDigital();
         konversiMataUang();
        
-        // Mengecek validasi sebelum uang benar-benar dikirim
-        if (sistemKeamanan.validasiKeamanan()) {
-            System.out.println("[Sukses] Dana berhasil dikirim ke luar negeri dalam " + mataUang + "!");
-        } else {
-            System.out.println("[Gagal] Transaksi diblokir! Masalah keamanan terdeteksi.");
-        }
+        // Memanggil variabel final ID_SERVER secara langsung untuk menunjukkan
+        // integrasi dengan kelas ProtokolKeamanan
+        System.out.println("[Sistem] Transaksi diamankan melalui server: " + sistemKeamanan.ID_SERVER);
+        System.out.println("[Sukses] Dana berhasil dikirim ke luar negeri dalam " + mataUang + "!");
     }
+
 
 }
