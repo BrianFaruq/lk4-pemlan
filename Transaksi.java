@@ -1,3 +1,4 @@
 public interface Transaksi {
-    void transfer();
+    void prosesTransaksi();
+    double getJumlah();
 }
