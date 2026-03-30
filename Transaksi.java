@@ -1,4 +1,4 @@
 public interface Transaksi {
-    void prosesTransaksi();
+    void prosesTransaksi(RekeningValas rekeningValas, double transferAmount);
 
 }

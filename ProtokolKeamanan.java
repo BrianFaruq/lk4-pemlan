@@ -5,8 +5,17 @@ public final class ProtokolKeamanan {
         this.ID_SERVER = ID_SERVER;
     };
 
-    protected boolean validasiKeamanan() {
-        return true;
+    protected boolean validasiKeamanan(int PIN, int truePIN) {
+        System.out.println("This transaction is validated by "+ this.ID_SERVER);
+        for (int i=0; i<3;i++){
+            if (PIN == truePIN){
+                return true;
+            }else{
+                System.out.println("PIN salah.");
+            }
+        }
+        return false;
+
     }
 
 

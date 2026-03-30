@@ -13,7 +13,7 @@ public class Rekening {
 
 
     public void cekSaldo() {
-        System.out.println("Rekening: " + nomorRekening + " | Saldo: " + saldo);
+        System.out.printf("Rekening: %s | Saldo: %.2f\n", nomorRekening, saldo);
     }
 
 }
