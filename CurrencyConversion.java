@@ -1,4 +1,8 @@
 public class CurrencyConversion {
+
+    /**
+     * Kelas ini digunakan untuk mengkonversi mata uang dengan intermediet USD
+     */
     public static double toUSD(String originCurrency ,double amount) {
         switch (originCurrency){
             case "USD":

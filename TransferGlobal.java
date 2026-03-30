@@ -1,4 +1,6 @@
 public interface TransferGlobal extends LayananInternasional, TransaksiDigital {
-    //void kirimKeLuarNegeri();
+    /**
+     * Abstract method kirim lintas negara
+     */
     public void kirimLintasNegara(RekeningValas rekeningTujuan, double transferAmount);
 }

@@ -1,8 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        // 1. Inisialisasi sistem keamanan dengan ID Server yang final (tidak bisa diubah)
-        ProtokolKeamanan protokol = new ProtokolKeamanan("SERVER-US-EAST-99");
- 
  
         // 2. Membuat objek Rekening Valas baru
         // Kita memberikan modal awal 5000, mata uang USD, dan memasukkan objek protokol keamanan
@@ -23,7 +20,9 @@ public class Main {
         akunValas.kirimLintasNegara(akunValas2, transferAmount);
         akunValas3.transferLokal(akunValas, transferAmount);
 
-
+        /**
+         * Menampilkan info akhir
+         */
         akunValas.cekSaldo();
         akunValas2.cekSaldo();  
         akunValas3.cekSaldo();
